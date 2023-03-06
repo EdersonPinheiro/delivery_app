@@ -4,12 +4,14 @@ class Order {
   final num total;
   final String copiaecola;
   final DateTime? createdAt;
+  final String status;
+
   Order(
       {required this.id,
       required this.qrCodeImage,
       required this.total,
       required this.copiaecola,
-      this.createdAt});
+      this.createdAt, required this.status});
 
   factory Order.fromJson(Map<String, dynamic> json) {
     return Order(
@@ -17,7 +19,7 @@ class Order {
         qrCodeImage: json['qrCodeImage'],
         total: json['total'],
         copiaecola: json['copiaecola'],
-        createdAt: DateTime.parse(json['createdAt']));
+        createdAt: DateTime.parse(json['createdAt']), status: json['status'] ?? 'pending_payment');
   }
 
   factory Order.toJson(Map<String, dynamic> json) {
@@ -26,6 +28,7 @@ class Order {
       qrCodeImage: json['qrCodeImage'],
       total: json['total'],
       copiaecola: json['copiaecola'],
+      status: json['status'],
     );
   }
 }

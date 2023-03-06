@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import '../models/order.dart';
 import '../token.dart';
@@ -44,6 +45,14 @@ class _OrdersPageState extends State<OrdersPage> {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          'Status: ${order.status.obs}',
+                          style: TextStyle(
+                            fontSize: 18,
+                            
                           ),
                         ),
                         SizedBox(height: 8),

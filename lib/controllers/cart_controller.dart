@@ -6,7 +6,7 @@ import '../view/payment_page.dart';
 
 class CartController {
 
-  Future<void> checkout(int total) async {
+  Future<void> checkout(double total) async {
     try {
       final response = await Dio()
           .post('https://parseapi.back4app.com/parse/functions/checkout',

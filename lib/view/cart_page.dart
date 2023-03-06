@@ -55,8 +55,8 @@ class _CartPageState extends State<CartPage> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    int total = totalItemCart();
-                    controller.checkout(total.toInt());
+                    double total = totalItemCart();
+                    controller.checkout(total);
                   },
                   child: const Text("Finalizar Compra"),
                 )
@@ -65,11 +65,11 @@ class _CartPageState extends State<CartPage> {
     );
   }
 
-  int total = 0;
-  int totalItemCart() {
+  double total = 0;
+  double totalItemCart() {
     if (cartItems.isNotEmpty) {
       for (Cart cart in cartItems) {
-        total += cart.price * cart.quantity;
+        total += (cart.price * cart.quantity);
       }
     }
     print(total);
