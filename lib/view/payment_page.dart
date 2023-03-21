@@ -5,11 +5,17 @@ import 'package:get/get.dart';
 
 import '../models/order.dart';
 
-class PaymentPage extends StatelessWidget {
-  String _chavePix = "";
+class PaymentPage extends StatefulWidget {
   final Order order;
 
   PaymentPage({required this.order});
+
+  @override
+  State<PaymentPage> createState() => _PaymentPageState();
+}
+
+class _PaymentPageState extends State<PaymentPage> {
+  String _chavePix = "";
 
   @override
   Widget build(BuildContext context) {
@@ -23,22 +29,22 @@ class PaymentPage extends StatelessWidget {
         children: <Widget>[
           Center(
             child: Image.memory(
-              base64Decode(order.qrCodeImage.substring(22)),
+              base64Decode(widget.order.qrCodeImage.substring(22)),
             ),
           ),
-          Text('Total: R\$ ${order.total}'),
+          Text('Total: R\$ ${widget.order.total}'),
           const SizedBox(height: 20),
           Container(
             width: 300,
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Text('${order.copiaecola}'),
+              child: Text('${widget.order.copiaecola}'),
             ),
           ),
           const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () async {
-              _copyToClipboard('${order.copiaecola}');
+              _copyToClipboard('${widget.order.copiaecola}');
               Get.snackbar('Chave Pix copiada!', "",
                   backgroundColor: Colors.white);
             },

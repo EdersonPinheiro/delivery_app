@@ -40,6 +40,7 @@ dependencies:
   dio: ^4.0.6
   http: ^0.13.5
   intl: ^0.18.0
+  parse_server_sdk_flutter: ^3.1.0
 
 dev_dependencies:
   flutter_test:

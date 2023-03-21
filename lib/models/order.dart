@@ -4,7 +4,7 @@ class Order {
   final num total;
   final String copiaecola;
   final DateTime? createdAt;
-  final String status;
+  late final String status;
 
   Order(
       {required this.id,
