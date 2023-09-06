@@ -1,16 +1,3 @@
 # delivery_app
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Neste projeto foi trabalhado com manipulações e requisições http, vinculado a forma de pagamento pix, utilizando a GerenciaNet onde é possível gerar um qrCode e código pix para realizar o pagamento, mostrando em tempo real o status do pedido com a plataforma back4app.
