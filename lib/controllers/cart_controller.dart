@@ -13,9 +13,9 @@ class CartController {
               options: Options(
                 headers: {
                   'X-Parse-Application-Id':
-                      'nPkNxrgspNFHnN9jgDnsUDljfeAtEtzN9a5EM0Ae',
+                      '',
                   'X-Parse-REST-API-Key':
-                      'tA4JuWVyFApBOQQgdJujXbNUNsk5znqpYIfaxc6M',
+                      '',
                   'X-Parse-Session-Token': '${token}',
                   'Content-Type': 'application/json;charset=UTF-8',
                 },
