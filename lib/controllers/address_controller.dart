@@ -23,8 +23,8 @@ class AddressController {
       Uri.parse(
           'https://parseapi.back4app.com/parse/functions/create-endereco'),
       headers: <String, String>{
-        'X-Parse-Application-Id': 'nPkNxrgspNFHnN9jgDnsUDljfeAtEtzN9a5EM0Ae',
-        'X-Parse-REST-API-Key': 'tA4JuWVyFApBOQQgdJujXbNUNsk5znqpYIfaxc6M',
+        'X-Parse-Application-Id': '',
+        'X-Parse-REST-API-Key': '',
         'X-Parse-Session-Token': '${token}',
         'Content-Type': 'application/json;charset=UTF-8',
       },
@@ -52,8 +52,8 @@ class AddressController {
 
   Future<List<Address>> getAddress() async {
     dio.options.headers = {
-      'X-Parse-Application-Id': 'nPkNxrgspNFHnN9jgDnsUDljfeAtEtzN9a5EM0Ae',
-      'X-Parse-REST-API-Key': 'tA4JuWVyFApBOQQgdJujXbNUNsk5znqpYIfaxc6M',
+      'X-Parse-Application-Id': '',
+      'X-Parse-REST-API-Key': '',
       'X-Parse-Session-Token': '${token}',
     };
 
