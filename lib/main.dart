@@ -19,7 +19,7 @@ Future<void> main() async {
     KeyApplicationId,
     KeyParseServerUrl,
     clientKey: keyClassUser,
-    liveQueryUrl: 'wss://deliveryappevo.b4a.io',
+    liveQueryUrl: 'wss://deliveryapp.b4a.io',
     debug: true,
   );
   runApp(const MyApp());
